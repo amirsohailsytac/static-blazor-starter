@@ -8,10 +8,7 @@
       "methods": [
         "get"
       ],
-      "rewrite": "/api/applinks.json",
-      "headers": {
-        "Content-Type": "application/json"
-      }
+      "rewrite": "/api/WeatherForecast"
     }
   ]
 }
