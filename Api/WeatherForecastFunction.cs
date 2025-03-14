@@ -21,12 +21,25 @@ namespace Api
             var randomNumber = new Random();
             var temp = 0;
 
-            var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = temp = randomNumber.Next(-20, 55),
-                Summary = GetSummary(temp)
-            }).ToArray();
+            var result = "{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.example.appA",
+        "paths": [
+          "/pathA/*"
+        ]
+      },
+      {
+        "appID": "TEAMID.com.example.appB",
+        "paths": [
+          "/pathB/*"
+        ]
+      }
+    ]
+  }
+}";
 
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.WriteAsJsonAsync(result);
