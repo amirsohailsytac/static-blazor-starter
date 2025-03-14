@@ -1,5 +1,14 @@
 {
-    "navigationFallback": {
-        "rewrite": "/index.html"
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/.well-known/apple-app-site-association",
+      "methods": [
+        "get"
+      ],
+      "rewrite": "/api/WeatherForecast"
     }
+  ]
 }
