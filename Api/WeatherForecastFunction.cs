@@ -21,26 +21,7 @@ namespace Api
             var randomNumber = new Random();
             var temp = 0;
 
-            var result = "{
-  "applinks": {
-    "apps": [],
-    "details": [
-      {
-        "appID": "TEAMID.com.example.appA",
-        "paths": [
-          "/pathA/*"
-        ]
-      },
-      {
-        "appID": "TEAMID.com.example.appB",
-        "paths": [
-          "/pathB/*"
-        ]
-      }
-    ]
-  }
-}";
-
+            var result ="{\"key\":\"value\", \"anotherKey\":\"anotherValue\"}";
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.WriteAsJsonAsync(result);
 
