@@ -20,8 +20,8 @@ namespace Api
         {
             var randomNumber = new Random();
             var temp = 0;
-
-            var result ="{\"key\":\"value\", \"anotherKey\":\"anotherValue\"}";
+            var filePath = @"..\applinks.json";
+            var result = File.ReadAllText(filePath);
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.WriteAsJsonAsync(result);
 
